@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://cdn.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn.vectorstock.com">
+	<meta name="theme-color" content="#101122">
+	<script type="text/javascript" nonce="qe/DpvRnyhbsZWrhvwsi9BwUzcpK4CJAW8ThC63707U=">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"02e09611df",applicationID:"156179534"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="csrf-name" content="csrf6282618185fd2">
+	<meta name="csrf-value" content="41576deb6b3cc687cfab32ea108fdc76">
+	<meta name="csp-nonce" content="qe/DpvRnyhbsZWrhvwsi9BwUzcpK4CJAW8ThC63707U=">
+	<meta name="cart-hash" content="d751713988987e9331980363e24189ce">
+	<meta name="live-settings" content="[]">
+	<meta name="twitter:site" content="@VectorStock">
+	<meta property="og:site_name" content="VectorStock">
+	<meta property="fb:app_id" content="241100862642313">
+
+	<link rel="shortcut icon" href="https://cdn.vectorstock.com/img/icons/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="VectorStock Search" href="https://www.vectorstock.com/xml/searchbox.xml">
+
+	<title>Shopping cart sign white icon with soft Royalty Free Vector</title>
+	<meta name="description" content="Shopping cart sign. Vector. White icon with soft shadow on transparent background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+	
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.vectorstock.com/royalty-free-vector/shopping-cart-sign-white-icon-with-soft-vector-15479300">
+	<meta property="og:title" content="Shopping cart sign white icon with soft vector image on VectorStock">
+	<meta property="og:description" content="Shopping cart sign. Vector. White icon with soft shadow on transparent background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+	<meta property="og:image" content="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+	<meta property="og:image:url" content="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+	<meta property="og:image:secure_url" content="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="1000">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://www.vectorstock.com/royalty-free-vector/shopping-cart-sign-white-icon-with-soft-vector-15479300">
+	<meta name="twitter:title" content="Shopping cart sign white icon with soft vector image">
+	<meta name="twitter:description" content="Shopping cart sign. Vector. White icon with soft shadow on transparent background">
+	<meta name="twitter:image" content="https://cdn1.vectorstock.com/i/thumb-large/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+	<meta name="twitter:image:width" content="238">
+	<meta name="twitter:image:height" content="250">
+
+	<link rel="canonical" href="https://www.vectorstock.com/royalty-free-vector/shopping-cart-sign-white-icon-with-soft-vector-15479300">
+
+	<link rel="stylesheet" type="text/css" href="/cache/common1650943013.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/common-payment-paddle1650943013.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/vector1650943013.min.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBXWNL4G7Q"></script>
+	<script src="/cache/common1651116065.min.js"></script>
+	<script src="/cache/common-payment-paddle1651116065.min.js"></script>
+	<script src="/cache/vector1651116065.min.js"></script>
+</head>
+<body>
+
+<!-- Top header -->
+<header>
+	<nav class="top">
+		<figure>
+			<a href="/" title="VectorStock&reg;">VectorStock&reg;</a>
+		</figure>
+
+		<div class="grid">
+			<form id="searchbox" class="focused empty">
+				<div class="wrap">
+					<fieldset>
+						<div class="contents">
+							<div class="tags">
+								<ul></ul>
+							</div>
+							<div class="input">
+								<input type="text" name="input" autocomplete="off" autocapitalize="none" spellcheck="true" value="" placeholder="Search&hellip;" maxlength="50" autofocus>
+								<button type="button" data-action="clear">&times;</button>
+							</div>
+
+							<input type="hidden" name="category" value="">
+							<input type="hidden" name="custom_srp" value="">
+							<input type="hidden" name="artist" value="">
+							<input type="hidden" name="similar" value="">
+						</div>
+					</fieldset>
+
+					<button type="submit">
+						<span class="icon">Search</span>
+					</button>
+				</div>
+			</form>
+			<ul>
+				<li><a href="/royalty-free-vectors">All Vectors</a></li>
+				<li><a href="/free-vectors">Free Vectors</a></li>
+			</ul>
+		</div>
+
+		<div class="aside">
+			<ul>
+				<li><a href="/popular-categories" title="Popular Categories">Categories</a></li>
+				<li><a href="/pricing" title="Pricing">Pricing</a></li>
+				<li class="account">
+					<button type="button" data-action="signup">Sign Up</button>
+					<button type="button" data-action="login">Login</button>
+				</li>
+			</ul>
+		</div>
+
+		<div id="mobilenav-icon">
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</nav>
+
+	<!-- Submenu -->
+		<nav id="searchrelated"></nav>	
+
+
+	<!-- Mobile menu -->
+	<div id="mobilenav-menu">
+		<div>
+			<div class="group">
+				<h4>Browse</h4>
+				<ul>
+					<li><a href="/royalty-free-vectors">All Vectors</a></li>
+					<li><a href="/free-vectors">Free Vectors</a></li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4>Account</h4>
+				<ul>
+					<li class="account">
+						<ul>
+							<li><a href="/signup">Sign Up</a></li>
+							<li data-action="login"><a href="/?login=1">Login&hellip;</a></li>
+							<li><a href="/pricing">Pricing</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form method="get" action="/auth/logout" class="logout">
+					<input type="hidden" name="logout" value="1">
+				</form>
+			</div>
+			<div class="group">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="/faq"><abbr title="Frequently Asked Questions">FAQs</abbr></a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!-- Account Menu Tabs -->
+		<aside id="nav_sidebar" class="tabs tabsDark">
+
+			<nav>
+				<ul role="tablist">
+					<li data-tab-id="signup" class=""><span role="tab"><span>Sign Up</span></span></li>
+					<li data-tab-id="login" class="selected"><span role="tab"><span>Log In</span></span></li>
+				</ul>
+			</nav>
+
+			<section id="sb_signup" data-tab-id="signup" class="">
+				<div class="primary">
+					<p>New to VectorStock?</p>
+					<p><em>We&apos;re the largest royalty-free, vector-only stock agency in the world.</em></p>
+					<p>Every week we add new premium graphics by the thousands.</p>
+				</div>
+				<div class="secondary">
+					<p>Whether you&apos;re a global ad&nbsp;agency or a freelance graphic designer, we have the vector graphics to make your project come to life.</p>
+					<p>Buy Vectors, sell Vectors or both. <a href="/signup">Sign up now, it&rsquo;s free.</a></p>
+				</div>
+				<div class="footer">
+					<button class="master">
+						<span class="title">Sign Up...</span>
+						<span class="value">
+							<span class="symbol signup"></span>
+						</span>
+					</button>
+				</div>
+			</section>
+
+			<section id="sb_login" data-tab-id="login" class="selected">
+				<form action="/auth/login" method="post">
+					<fieldset class="">
+						<label for="vs_username">Email / Username</label>
+						<div class="textfield">
+							<input type="text" id="vs_username" name="vs_username" value="" autocomplete="on" tabindex="1">
+						</div>
+					</fieldset>
+					<fieldset class="">
+						<label for="vs_password">Password</label>
+						<button type="button" class="forgot">Forgot Password</button>
+						<div class="textfield">
+							<input type="password" id="vs_password" name="vs_password" value="" autocomplete="on" tabindex="2"  maxlength="72">
+						</div>
+					</fieldset>
+
+
+					<button type="submit" tabindex="4">Log In</button>
+				</form>
+				<div class="alternatives">
+					<h6>Or Login With</h6>
+					<ul>
+						<li class="gp"><a href="/">
+							<span class="title">Google</span>
+							<span class="icon"></span>
+						</a></li>
+						<li class="fb"><a href="/">
+							<span class="title">Facebook</span>
+							<span class="icon"></span>
+						</a></li>
+					</ul>
+				</div>
+
+				
+			</section>
+		</aside>
+
+	<!-- Page -->
+	<article>
+		<section id="vs-asset">
+
+			<!-- Aside -->
+			<div class="aside">
+				<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors">
+							<span itemprop="name">Royalty Free Vectors</span>
+						</a>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors/shopping-vectors">
+							<span itemprop="name">Shopping Vectors</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+
+				<h1>Shopping cart sign white icon with soft vector&nbsp;image</h1>
+
+				<figure style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.webp">
+							<source type="image/jpeg" srcset="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+							<img src="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg" importance="high" title="Shopping cart sign white icon with soft vector image" alt="Shopping cart sign white icon with soft">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+				</figure>
+
+				<form data-loggedin="0" data-licenses="2" data-license="standard" data-status="" data-payment="single-image">
+					<input type="hidden" id="vector_id" value="15479300">
+					<input type="hidden" id="vector_title" value="Shopping cart sign white icon with soft">
+					<input type="hidden" id="vector_description" value="Shopping cart sign. Vector. White icon with soft shadow on transparent background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+					<input type="hidden" id="vector_url" value="https://www.vectorstock.com/royalty-free-vector/shopping-cart-sign-white-icon-with-soft-vector-15479300">
+					<input type="hidden" id="vector_media" value="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+					<input type="hidden" id="vector_ratio" value="1">
+					<input type="hidden" id="vector_license_status" value="">
+					<input type="hidden" id="artist_name" value="Asmati">
+					<input type="hidden" id="account_user" value="0">
+
+					<input type="hidden" id="vector_transparent_png" value="0">
+					<input type="hidden" id="vector_download_urls" value="[]">
+					<input type="hidden" id="vector_license_options" value="[{&quot;type&quot;:&quot;standard&quot;,&quot;cost&quot;:{&quot;single-image&quot;:14.99,&quot;credits&quot;:1,&quot;subscription&quot;:1}},{&quot;type&quot;:&quot;expanded&quot;,&quot;cost&quot;:{&quot;single-image&quot;:39.99,&quot;credits&quot;:30}}]">
+					<input type="hidden" id="account_filetype" value="zip">
+					<input type="hidden" id="account_customizations" value="[]">
+					<input type="hidden" id="account_cloud" value="[{&quot;type&quot;:&quot;googledrive&quot;,&quot;status&quot;:&quot;connect&quot;}]">
+					
+					<div class="options">
+						<!--
+						-- OPTION: License type
+						-->
+						<div class="option" data-type="license" data-license="standard" data-licenses="2">
+							<h6><span class="type">License</span><a href="/faq/members/standard-license">Learn More</a></h6>
+							<div class="optgroup radgroup">
+								<fieldset class="checked">
+									<label for="f_license_standard">
+										<input type="radio" id="f_license_standard" name="license" value="standard" checked="checked" tabindex="2">
+										<span class="label">Standard</span>
+										<span class="descr">For Print, Advertising, Design</span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_license_expanded">
+										<input type="radio" id="f_license_expanded" name="license" value="expanded" tabindex="4">
+										<span class="label">Expanded</span>
+										<span class="descr">For Print on Demand &amp; Resale</span>
+									</label>
+								</fieldset>
+							</div>
+
+							<div class="help">
+								<p>The license type determines how you can use this image.</p>
+								<table>
+									<thead>
+										<tr>
+											<th></th>
+																						<th data-license="standard">Std.</th>																						<th data-license="expanded">Exp.</th>										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td>Print / Editorial</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Graphic Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Web Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Social Media</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Edit &amp; Modify</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Multi-user</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Resale Items</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Print on Demand</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<!--
+						-- OPTION: Payment options (Standard)
+						-->
+						<div class="option" data-type="payment" data-license="standard">
+							<h6><span class="type">Ways to Buy</span><a href="/pricing">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="standard">
+								<fieldset class="checked" >
+									<label for="f_payment_standard_single-image">
+										<input type="radio" id="f_payment_standard_single-image" name="payment_standard" data-cost="14.99" value="single-image"  checked="checked" tabindex="5">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>14.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_credits">
+										<input type="radio" id="f_payment_standard_credits" name="payment_standard" data-cost="1" value="credits" tabindex="6">
+										<span class="label">Credits</span>
+										<span class="value"><small>&#36;</small><var>1.00</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_subscription">
+										<input type="radio" id="f_payment_standard_subscription" name="payment_standard" data-cost="1" value="subscription" tabindex="7">
+										<span class="label">Subscription</span>
+										<span class="value"><small>&#36;</small><var>0.69</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>There are three ways to pay for Standard licenses. Prices are &#36;<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Image Price</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>14.99</span>
+												</span>
+												<span class="byline">One-time payment</span>
+											</td>
+										</tr>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>1</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = &#36;1). Minimum purchase of 30.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Subscription Plan</span>
+													<span class="dm"></span>
+													<span class="dd"><em>From</em> 69&cent;</span>
+												</span>
+												<span class="byline">Choose a monthly plan. Unused downloads automatically roll into following month.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--
+						-- OPTION: Payment options (Expanded)
+						-->
+						<div class="option" data-type="payment" data-license="expanded">
+							<h6><span class="type">Ways to Buy</span><a href="/faq/members/ways-to-buy">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="expanded">
+								<fieldset class="checked">
+									<label for="f_payment_expanded_single-image">
+										<input type="radio" id="f_payment_expanded_single-image" name="payment_expanded" data-cost="39.99" value="single-image" checked="checked" tabindex="8">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>39.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_expanded_credits">
+										<input type="radio" id="f_payment_expanded_credits" name="payment_expanded" data-cost="30" value="credits" tabindex="9">
+										<span class="label">Credits</span>
+										<span class="value"><small>&#36;</small><var>30.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+														<div class="help">
+								<p>There are two ways to pay for Expanded licenses. Prices are &#36;<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Cost per Image</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>39.99</span>
+												</span>
+												<span class="byline">One-off payment, no signup needed.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>30</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = &#36;1).</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+													</div>
+						<!--
+						-- OPTION: Customization
+						-->
+						<div class="option" data-type="customization">
+							<h6><span class="type">New Option!</span><a href="/faq/members/what-is-hire-a-designer">What is this?</a></h6>
+							<div class="optgroup chkgroup">
+								<fieldset>
+									<label for="f_payment_customization">
+										<input type="checkbox" id="f_payment_customization" name="payment_customization" data-cost="85" value="customization" tabindex="12">
+										<span class="label">Customize image</span>
+										<span class="descr">Only available with Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>85.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>Love the image but just need a few modifications? Let our talented artists do the work for you!</p>
+								<p>We&rsquo;ll connect you with a designer who can make updates and send you the artwork in a format of your choice.</p>
+								<h4>Examples</h4>
+								<ul>
+									<li>Change the text</li>
+									<li>Modify colors</li>
+									<li>Resize to new dimensions</li>
+									<li>Include logo or symbol</li>
+									<li>Add your company or business name</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="download">
+						<button type="button" data-action="download">
+							<span class="label">Download Image</span>
+							<span class="icon"></span>
+						</button>
+						<h6><span class="label">Files Included</span></h6>
+						<div class="help">
+							<span class="loading"><span class="label">Loading Details...</span></span>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Image -->
+			<div class="image">
+				<figure data-orientation="square" style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.webp">
+							<source type="image/jpeg" srcset="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+							<img src="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg" importance="high" title="Shopping cart sign white icon with soft vector image" alt="Shopping cart sign white icon with soft">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+					<div class="panels">
+						<div class="share">
+							<ul>
+								<li><button type="button" data-action="pinterest"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M12.5,0C5.6,0,0,5.6,0,12.5c0,5.12,3.08,9.52,7.48,11.45c-0.03-0.87-0.01-1.92,0.22-2.87c0.24-1.01,1.61-6.81,1.61-6.81s-0.4-0.8-0.4-1.98c0-1.85,1.07-3.24,2.41-3.24c1.14,0,1.69,0.85,1.69,1.88c0,1.14-0.73,2.85-1.1,4.44c-0.31,1.33,0.67,2.41,1.97,2.41c2.37,0,3.96-3.04,3.96-6.65c0-2.74-1.85-4.79-5.2-4.79c-3.79,0-6.15,2.83-6.15,5.99c0,1.09,0.32,1.86,0.82,2.45c0.23,0.27,0.26,0.38,0.18,0.7c-0.06,0.23-0.2,0.78-0.25,1c-0.08,0.32-0.34,0.43-0.63,0.31c-1.75-0.71-2.56-2.62-2.56-4.77c0-3.55,3-7.81,8.93-7.81c4.77,0,7.91,3.45,7.91,7.16c0,4.9-2.73,8.57-6.75,8.57c-1.35,0-2.62-0.73-3.05-1.56c0,0-0.73,2.88-0.88,3.44c-0.27,0.96-0.78,1.93-1.26,2.68C10.08,24.82,11.27,25,12.5,25C19.4,25,25,19.4,25,12.5S19.4,0,12.5,0L12.5,0z"/></svg></span><span class="label">Save to Pinterest</span></button></li>
+								<li><button type="button" data-action="facebook"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M22.44,1H2.56C1.7,1,1,1.7,1,2.56v19.88C1,23.3,1.7,24,2.56,24h10.41v-8.89H9.98v-3.46h2.99V9.1c0-2.96,1.81-4.58,4.45-4.58c1.27,0,2.35,0.09,2.67,0.14v3.1l-1.83,0c-1.44,0-1.72,0.68-1.72,1.69v2.21h3.43l-0.45,3.46h-2.98V24h5.89C23.3,24,24,23.3,24,22.44V2.56C24,1.7,23.3,1,22.44,1z"/></svg></span><span class="label">Post to Facebook</span></button></li>
+								<li><button type="button" data-action="twitter"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M7.86,22.5c9.43,0,14.59-7.69,14.59-14.37c0-0.22,0-0.44-0.01-0.65c1-0.71,1.87-1.6,2.56-2.61c-0.92,0.4-1.91,0.67-2.95,0.79c1.06-0.62,1.87-1.61,2.26-2.79c-0.99,0.58-2.09,1-3.26,1.23c-0.94-0.98-2.27-1.6-3.74-1.6c-2.83,0-5.13,2.26-5.13,5.05c0,0.4,0.05,0.78,0.13,1.15C8.05,8.49,4.27,6.48,1.74,3.42C1.3,4.17,1.05,5.04,1.05,5.96c0,1.75,0.91,3.3,2.28,4.2C2.49,10.14,1.7,9.91,1,9.53C1,9.55,1,9.58,1,9.6c0,2.45,1.77,4.49,4.11,4.95c-0.43,0.12-0.88,0.18-1.35,0.18c-0.33,0-0.65-0.03-0.96-0.09c0.65,2.01,2.55,3.47,4.79,3.51C5.84,19.5,3.63,20.3,1.22,20.3c-0.41,0-0.82-0.02-1.22-0.07C2.27,21.66,4.97,22.5,7.86,22.5"/></svg></span><span class="label">Post to Twitter</span></button></li>
+							</ul>
+							<ul>
+								<li><button type="button" data-action="email"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M24.37,2.25c-0.07,0-0.15,0.01-0.22,0.04l-2.75,1L0.24,12.14c-0.3,0.13-0.33,0.54-0.05,0.71l3.94,2.39l0.99,0.6l1.94,5.58c0.05,0.14,0.25,0.1,0.25-0.04l0.03-4.19v-0.05l8.87-7.49c0.15-0.13,0.37-0.12,0.52,0.01l0,0c0.17,0.15,0.17,0.42,0.01,0.58L8.85,18v0.18l7.53,4.52c0.21,0.13,0.48,0.04,0.57-0.19l7.89-19.11l0.11-0.28C25.13,2.68,24.8,2.25,24.37,2.25z"/></svg></span><span class="label">Send by Email</span></button></li>
+							</ul>
+						</div>
+						<div class="composite">
+							<button type="button" data-action="download"><span><span class="label">Download JPG Preview Image</span></span></button>
+						</div>
+					</div>
+				</figure>
+				<div class="details">
+					<div class="meta">
+						<ul>
+							<li class="meta-id">
+								<dl><dt>Image ID</dt><dd>15479300</dd></dl>
+							</li>
+							<li class="meta-color-mode">
+								<dl><dt>Color Mode</dt><dd>RGB</dd></dl>
+							</li>
+							<li class="meta-artist">
+								<dl>
+									<dt>Artist</dt>
+									<dd>
+										<a href="/royalty-free-vectors/vectors-by_Asmati" rel="nofollow">Asmati</a>
+										<button type="button" data-action="follow" title="Follow Artists that you like to create a newsfeed of their recent images."><span class="label">Follow</span></button>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="options" data-total="2">
+						<ul>
+							<li class="opt-like">
+								<button type="button" data-action="like" data-count="0"><span class="icon">&hearts;</span><span class="label">Like</span><span class="tally"></span></button>
+							</li>
+							<li class="opt-cart">
+								<button type="button" data-action="cart"><span class="icon">+</span><span class="label">Cart</span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Metadata -->
+			<div class="metadata">
+				<div itemtype="http://schema.org/ImageObject" itemscope>
+					<meta itemprop="contentUrl" content="https://cdn1.vectorstock.com/i/1000x1000/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+					<meta itemprop="thumbnailUrl" content="https://cdn1.vectorstock.com/i/thumb-large/93/00/shopping-cart-sign-white-icon-with-soft-vector-15479300.jpg">
+					<meta itemprop="name" content="Shopping cart sign white icon with soft">
+					<meta itemprop="description" content="Shopping cart sign. Vector. White icon with soft shadow on transparent background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images. vector image">
+					<meta itemprop="author" content="Asmati"/>
+					<meta itemprop="datePublished" content="2017-06-26">
+					<meta itemprop="license" content="https://www.vectorstock.com/faq/members/standard-license">
+					<meta itemprop="acquireLicensePage" content="https://www.vectorstock.com/royalty-free-vector/shopping-cart-sign-white-icon-with-soft-vector-15479300">
+					<meta itemprop="sourceOrganization" content="VectorStock.com">
+				</div>
+			</div>
+			
+		</section>
+
+
+		<section id="vs-related">
+						<div id="group-similar" class="group">
+				<h6><span class="icon"></span><strong>Similar Images</strong></h6>
+
+				<div class="gallery large">
+					<ul>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/03/78/white-minimalist-icon-set-vector-21600378.jpg"><a href="//www.vectorstock.com/royalty-free-vector/white-minimalist-icon-set-vector-21600378" title="white minimalist icon set vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/03/78/white-minimalist-icon-set-vector-21600378.jpg" title="white minimalist icon set" alt="white minimalist icon set vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/89/76/shopping-trolley-line-design-single-isolated-vector-20778976.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-trolley-line-design-single-isolated-vector-20778976" title="shopping trolley - line design single isolated vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/89/76/shopping-trolley-line-design-single-isolated-vector-20778976.jpg" title="shopping trolley - line design single isolated" alt="shopping trolley - line design single isolated vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/44/06/soap-icon-thin-line-art-colorful-icon-vector-21714406.jpg"><a href="//www.vectorstock.com/royalty-free-vector/soap-icon-thin-line-art-colorful-icon-vector-21714406" title="soap icon thin line art colorful icon vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/44/06/soap-icon-thin-line-art-colorful-icon-vector-21714406.jpg" title="soap icon thin line art colorful icon" alt="soap icon thin line art colorful icon vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/78/44/minimalistic-geometric-font-in-soft-colours-vector-22827844.jpg"><a href="//www.vectorstock.com/royalty-free-vector/minimalistic-geometric-font-in-soft-colours-vector-22827844" title="minimalistic geometric font in soft colours vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/78/44/minimalistic-geometric-font-in-soft-colours-vector-22827844.jpg" title="minimalistic geometric font in soft colours" alt="minimalistic geometric font in soft colours vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/34/59/sign-line-art-ball-yarn-with-knitting-tools-vector-26063459.jpg"><a href="//www.vectorstock.com/royalty-free-vector/sign-line-art-ball-yarn-with-knitting-tools-vector-26063459" title="sign line art ball yarn with knitting tools vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/34/59/sign-line-art-ball-yarn-with-knitting-tools-vector-26063459.jpg" title="sign line art ball yarn with knitting tools" alt="sign line art ball yarn with knitting tools vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/88/12/ice-cream-in-waffle-cone-outline-icon-symbol-vector-35908812.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ice-cream-in-waffle-cone-outline-icon-symbol-vector-35908812" title="ice cream in waffle cone outline icon symbol vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/88/12/ice-cream-in-waffle-cone-outline-icon-symbol-vector-35908812.jpg" title="ice cream in waffle cone outline icon symbol" alt="ice cream in waffle cone outline icon symbol vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/11/65/compact-air-filter-icon-humidity-regulator-vector-39921165.jpg"><a href="//www.vectorstock.com/royalty-free-vector/compact-air-filter-icon-humidity-regulator-vector-39921165" title="compact air filter icon humidity regulator vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/11/65/compact-air-filter-icon-humidity-regulator-vector-39921165.jpg" title="compact air filter icon humidity regulator" alt="compact air filter icon humidity regulator vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/00/93/premium-quality-label-vector-2900093.jpg"><a href="//www.vectorstock.com/royalty-free-vector/premium-quality-label-vector-2900093" title="premium quality label vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/00/93/premium-quality-label-vector-2900093.jpg" title="premium quality label" alt="premium quality label vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/79/23/black-ninja-logo-design-template-vector-28617923.jpg"><a href="//www.vectorstock.com/royalty-free-vector/black-ninja-logo-design-template-vector-28617923" title="black ninja logo design template vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/79/23/black-ninja-logo-design-template-vector-28617923.jpg" title="black ninja logo design template" alt="black ninja logo design template vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/83/18/cube-3d-vector-1938318.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cube-3d-vector-1938318" title="cube 3d vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/83/18/cube-3d-vector-1938318.jpg" title="cube 3d" alt="cube 3d vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/95/48/logo-hb-initials-monogram-bold-font-two-white-vector-31409548.jpg"><a href="//www.vectorstock.com/royalty-free-vector/logo-hb-initials-monogram-bold-font-two-white-vector-31409548" title="logo hb initials monogram bold font two white vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/95/48/logo-hb-initials-monogram-bold-font-two-white-vector-31409548.jpg" title="logo hb initials monogram bold font two white" alt="logo hb initials monogram bold font two white vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/47/66/paper-polygon-heart-vector-13834766.jpg"><a href="//www.vectorstock.com/royalty-free-vector/paper-polygon-heart-vector-13834766" title="paper polygon heart vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/47/66/paper-polygon-heart-vector-13834766.jpg" title="paper polygon heart" alt="paper polygon heart vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/12/36/login-interface-username-and-password-fl-vector-1941236.jpg"><a href="//www.vectorstock.com/royalty-free-vector/login-interface-username-and-password-fl-vector-1941236" title="login interface - username and password fl vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/12/36/login-interface-username-and-password-fl-vector-1941236.jpg" title="login interface - username and password fl" alt="login interface - username and password fl vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/96/86/merry-christmas-greeting-card-with-paper-cut-out-vector-22789686.jpg"><a href="//www.vectorstock.com/royalty-free-vector/merry-christmas-greeting-card-with-paper-cut-out-vector-22789686" title="merry christmas greeting card with paper cut out vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/96/86/merry-christmas-greeting-card-with-paper-cut-out-vector-22789686.jpg" title="merry christmas greeting card with paper cut out" alt="merry christmas greeting card with paper cut out vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/62/80/circle-logo-flat-cartoon-white-round-vector-21156280.jpg"><a href="//www.vectorstock.com/royalty-free-vector/circle-logo-flat-cartoon-white-round-vector-21156280" title="circle logo flat cartoon white round vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/62/80/circle-logo-flat-cartoon-white-round-vector-21156280.jpg" title="circle logo flat cartoon white round" alt="circle logo flat cartoon white round vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/94/42/set-of-light-buttons-vector-40019442.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-of-light-buttons-vector-40019442" title="set of light buttons vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/94/42/set-of-light-buttons-vector-40019442.jpg" title="set of light buttons" alt="set of light buttons vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/86/88/dental-tooth-round-logo-vector-36458688.jpg"><a href="//www.vectorstock.com/royalty-free-vector/dental-tooth-round-logo-vector-36458688" title="dental tooth round logo vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/86/88/dental-tooth-round-logo-vector-36458688.jpg" title="dental tooth round logo" alt="dental tooth round logo vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/08/22/shopping-basket-3d-icon-set-vector-38340822.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-basket-3d-icon-set-vector-38340822" title="shopping basket 3d icon set vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/08/22/shopping-basket-3d-icon-set-vector-38340822.jpg" title="shopping basket 3d icon set" alt="shopping basket 3d icon set vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/73/37/black-bat-logo-in-circle-on-white-background-vector-38807337.jpg"><a href="//www.vectorstock.com/royalty-free-vector/black-bat-logo-in-circle-on-white-background-vector-38807337" title="black bat logo in circle on white background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/73/37/black-bat-logo-in-circle-on-white-background-vector-38807337.jpg" title="black bat logo in circle on white background" alt="black bat logo in circle on white background vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/47/92/neumorphic-ui-ux-white-user-interface-elements-vector-32034792.jpg"><a href="//www.vectorstock.com/royalty-free-vector/neumorphic-ui-ux-white-user-interface-elements-vector-32034792" title="neumorphic ui ux white user interface elements vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/47/92/neumorphic-ui-ux-white-user-interface-elements-vector-32034792.jpg" title="neumorphic ui ux white user interface elements" alt="neumorphic ui ux white user interface elements vector image"></noscript></a></li>
+					</ul>
+				</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="31703308" data-title="sunglasses - colored icon on white background" data-src="https://cdn4.vectorstock.com/i/thumbs/33/08/sunglasses-colored-icon-on-white-background-vector-31703308.jpg"><a href="//www.vectorstock.com/royalty-free-vector/sunglasses-colored-icon-on-white-background-vector-31703308" title="sunglasses - colored icon on white background vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/33/08/sunglasses-colored-icon-on-white-background-vector-31703308.jpg" title="sunglasses - colored icon on white background" alt="sunglasses - colored icon on white background vector image"></noscript></a></li>
+						<li data-id="21931548" data-title="black friday stylish premium banner or header" data-src="https://cdn4.vectorstock.com/i/thumbs/15/48/black-friday-stylish-premium-banner-or-header-vector-21931548.jpg"><a href="//www.vectorstock.com/royalty-free-vector/black-friday-stylish-premium-banner-or-header-vector-21931548" title="black friday stylish premium banner or header vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/15/48/black-friday-stylish-premium-banner-or-header-vector-21931548.jpg" title="black friday stylish premium banner or header" alt="black friday stylish premium banner or header vector image"></noscript></a></li>
+						<li data-id="20840407" data-title="color clock template banner" data-src="https://cdn3.vectorstock.com/i/thumbs/04/07/color-clock-template-banner-vector-20840407.jpg"><a href="//www.vectorstock.com/royalty-free-vector/color-clock-template-banner-vector-20840407" title="color clock template banner vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/04/07/color-clock-template-banner-vector-20840407.jpg" title="color clock template banner" alt="color clock template banner vector image"></noscript></a></li>
+						<li data-id="23296600" data-title="strong wings abstract bold color logo winged logo" data-src="https://cdn1.vectorstock.com/i/thumbs/66/00/strong-wings-abstract-bold-color-logo-winged-logo-vector-23296600.jpg"><a href="//www.vectorstock.com/royalty-free-vector/strong-wings-abstract-bold-color-logo-winged-logo-vector-23296600" title="strong wings abstract bold color logo winged logo vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/66/00/strong-wings-abstract-bold-color-logo-winged-logo-vector-23296600.jpg" title="strong wings abstract bold color logo winged logo" alt="strong wings abstract bold color logo winged logo vector image"></noscript></a></li>
+						<li data-id="21907522" data-title="icon of cheese on white" data-src="https://cdn3.vectorstock.com/i/thumbs/75/22/icon-of-cheese-on-white-vector-21907522.jpg"><a href="//www.vectorstock.com/royalty-free-vector/icon-of-cheese-on-white-vector-21907522" title="icon of cheese on white vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/75/22/icon-of-cheese-on-white-vector-21907522.jpg" title="icon of cheese on white" alt="icon of cheese on white vector image"></noscript></a></li>
+						<li data-id="31075921" data-title="a cup black coffee top view isolated on white" data-src="https://cdn2.vectorstock.com/i/thumbs/59/21/a-cup-black-coffee-top-view-isolated-on-white-vector-31075921.jpg"><a href="//www.vectorstock.com/royalty-free-vector/a-cup-black-coffee-top-view-isolated-on-white-vector-31075921" title="a cup black coffee top view isolated on white vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/59/21/a-cup-black-coffee-top-view-isolated-on-white-vector-31075921.jpg" title="a cup black coffee top view isolated on white" alt="a cup black coffee top view isolated on white vector image"></noscript></a></li>
+						<li data-id="33336201" data-title="simple ghost logo icon template" data-src="https://cdn2.vectorstock.com/i/thumbs/62/01/simple-ghost-logo-icon-template-vector-33336201.jpg"><a href="//www.vectorstock.com/royalty-free-vector/simple-ghost-logo-icon-template-vector-33336201" title="simple ghost logo icon template vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/62/01/simple-ghost-logo-icon-template-vector-33336201.jpg" title="simple ghost logo icon template" alt="simple ghost logo icon template vector image"></noscript></a></li>
+						<li data-id="37111087" data-title="minimalist jupiter or earth world globe moon" data-src="https://cdn3.vectorstock.com/i/thumbs/10/87/minimalist-jupiter-or-earth-world-globe-moon-vector-37111087.jpg"><a href="//www.vectorstock.com/royalty-free-vector/minimalist-jupiter-or-earth-world-globe-moon-vector-37111087" title="minimalist jupiter or earth world globe moon vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/10/87/minimalist-jupiter-or-earth-world-globe-moon-vector-37111087.jpg" title="minimalist jupiter or earth world globe moon" alt="minimalist jupiter or earth world globe moon vector image"></noscript></a></li>
+						<li data-id="21520246" data-title="open sign icon" data-src="https://cdn2.vectorstock.com/i/thumbs/02/46/open-sign-icon-vector-21520246.jpg"><a href="//www.vectorstock.com/royalty-free-vector/open-sign-icon-vector-21520246" title="open sign icon vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/02/46/open-sign-icon-vector-21520246.jpg" title="open sign icon" alt="open sign icon vector image"></noscript></a></li>
+						<li data-id="21042433" data-title="realistic empty supermarket shopping cart" data-src="https://cdn4.vectorstock.com/i/thumbs/24/33/realistic-empty-supermarket-shopping-cart-vector-21042433.jpg"><a href="//www.vectorstock.com/royalty-free-vector/realistic-empty-supermarket-shopping-cart-vector-21042433" title="realistic empty supermarket shopping cart vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/24/33/realistic-empty-supermarket-shopping-cart-vector-21042433.jpg" title="realistic empty supermarket shopping cart" alt="realistic empty supermarket shopping cart vector image"></noscript></a></li>
+						<li data-id="22461812" data-title="usa traffic road signgeneral service sign" data-src="https://cdn3.vectorstock.com/i/thumbs/18/12/usa-traffic-road-signgeneral-service-sign-vector-22461812.jpg"><a href="//www.vectorstock.com/royalty-free-vector/usa-traffic-road-signgeneral-service-sign-vector-22461812" title="usa traffic road signgeneral service sign vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/18/12/usa-traffic-road-signgeneral-service-sign-vector-22461812.jpg" title="usa traffic road signgeneral service sign" alt="usa traffic road signgeneral service sign vector image"></noscript></a></li>
+						<li data-id="1865977" data-title="shopping basket long shadows icons" data-src="https://cdn3.vectorstock.com/i/thumbs/59/77/shopping-basket-long-shadows-icons-vector-1865977.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-basket-long-shadows-icons-vector-1865977" title="shopping basket long shadows icons vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/59/77/shopping-basket-long-shadows-icons-vector-1865977.jpg" title="shopping basket long shadows icons" alt="shopping basket long shadows icons vector image"></noscript></a></li>
+						<li data-id="23396799" data-title="read more colorful button set" data-src="https://cdn5.vectorstock.com/i/thumbs/67/99/read-more-colorful-button-set-vector-23396799.jpg"><a href="//www.vectorstock.com/royalty-free-vector/read-more-colorful-button-set-vector-23396799" title="read more colorful button set vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/67/99/read-more-colorful-button-set-vector-23396799.jpg" title="read more colorful button set" alt="read more colorful button set vector image"></noscript></a></li>
+						<li data-id="21832984" data-title="online shop white silhouette icons set" data-src="https://cdn5.vectorstock.com/i/thumbs/29/84/online-shop-white-silhouette-icons-set-vector-21832984.jpg"><a href="//www.vectorstock.com/royalty-free-vector/online-shop-white-silhouette-icons-set-vector-21832984" title="online shop white silhouette icons set vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/29/84/online-shop-white-silhouette-icons-set-vector-21832984.jpg" title="online shop white silhouette icons set" alt="online shop white silhouette icons set vector image"></noscript></a></li>
+						<li data-id="5961927" data-title="shopping basket" data-src="https://cdn3.vectorstock.com/i/thumbs/19/27/shopping-basket-vector-5961927.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-basket-vector-5961927" title="shopping basket vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/19/27/shopping-basket-vector-5961927.jpg" title="shopping basket" alt="shopping basket vector image"></noscript></a></li>
+						<li data-id="1849399" data-title="market cart flat icon" data-src="https://cdn5.vectorstock.com/i/thumbs/93/99/market-cart-flat-icon-vector-1849399.jpg"><a href="//www.vectorstock.com/royalty-free-vector/market-cart-flat-icon-vector-1849399" title="market cart flat icon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/93/99/market-cart-flat-icon-vector-1849399.jpg" title="market cart flat icon" alt="market cart flat icon vector image"></noscript></a></li>
+						<li data-id="40850632" data-title="3d web banner with red buy now button on red" data-src="https://cdn3.vectorstock.com/i/thumbs/06/32/3d-web-banner-with-red-buy-now-button-on-red-vector-40850632.jpg"><a href="//www.vectorstock.com/royalty-free-vector/3d-web-banner-with-red-buy-now-button-on-red-vector-40850632" title="3d web banner with red buy now button on red vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/06/32/3d-web-banner-with-red-buy-now-button-on-red-vector-40850632.jpg" title="3d web banner with red buy now button on red" alt="3d web banner with red buy now button on red vector image"></noscript></a></li>
+						<li data-id="32841176" data-title="shopping cart icons - almost flat style" data-src="https://cdn2.vectorstock.com/i/thumbs/11/76/shopping-cart-icons-almost-flat-style-vector-32841176.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-icons-almost-flat-style-vector-32841176" title="shopping cart icons - almost flat style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/11/76/shopping-cart-icons-almost-flat-style-vector-32841176.jpg" title="shopping cart icons - almost flat style" alt="shopping cart icons - almost flat style vector image"></noscript></a></li>
+						<li data-id="30576980" data-title="cart flat icon" data-src="https://cdn1.vectorstock.com/i/thumbs/69/80/cart-flat-icon-vector-30576980.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cart-flat-icon-vector-30576980" title="cart flat icon vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/69/80/cart-flat-icon-vector-30576980.jpg" title="cart flat icon" alt="cart flat icon vector image"></noscript></a></li>
+						<li data-id="8909720" data-title="shopping cart flat icon design" data-src="https://cdn1.vectorstock.com/i/thumbs/97/20/shopping-cart-flat-icon-design-vector-8909720.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-flat-icon-design-vector-8909720" title="shopping cart flat icon design vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/97/20/shopping-cart-flat-icon-design-vector-8909720.jpg" title="shopping cart flat icon design" alt="shopping cart flat icon design vector image"></noscript></a></li>
+						<li data-id="25761251" data-title="shopping cart icon" data-src="https://cdn2.vectorstock.com/i/thumbs/12/51/shopping-cart-icon-vector-25761251.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-icon-vector-25761251" title="shopping cart icon vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/12/51/shopping-cart-icon-vector-25761251.jpg" title="shopping cart icon" alt="shopping cart icon vector image"></noscript></a></li>
+						<li data-id="26356798" data-title="high detailed wondering smiley with a 3d speech" data-src="https://cdn4.vectorstock.com/i/thumbs/67/98/high-detailed-wondering-smiley-with-a-3d-speech-vector-26356798.jpg"><a href="//www.vectorstock.com/royalty-free-vector/high-detailed-wondering-smiley-with-a-3d-speech-vector-26356798" title="high detailed wondering smiley with a 3d speech vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/67/98/high-detailed-wondering-smiley-with-a-3d-speech-vector-26356798.jpg" title="high detailed wondering smiley with a 3d speech" alt="high detailed wondering smiley with a 3d speech vector image"></noscript></a></li>
+						<li data-id="18943880" data-title="shopping cart icon with long shadows" data-src="https://cdn1.vectorstock.com/i/thumbs/38/80/shopping-cart-icon-with-long-shadows-vector-18943880.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-icon-with-long-shadows-vector-18943880" title="shopping cart icon with long shadows vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/38/80/shopping-cart-icon-with-long-shadows-vector-18943880.jpg" title="shopping cart icon with long shadows" alt="shopping cart icon with long shadows vector image"></noscript></a></li>
+						<li data-id="34055714" data-title="interior design logo" data-src="https://cdn5.vectorstock.com/i/thumbs/57/14/interior-design-logo-vector-34055714.jpg"><a href="//www.vectorstock.com/royalty-free-vector/interior-design-logo-vector-34055714" title="interior design logo vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/57/14/interior-design-logo-vector-34055714.jpg" title="interior design logo" alt="interior design logo vector image"></noscript></a></li>
+						<li data-id="37637898" data-title="icon collection people doing various activities" data-src="https://cdn4.vectorstock.com/i/thumbs/78/98/icon-collection-people-doing-various-activities-vector-37637898.jpg"><a href="//www.vectorstock.com/royalty-free-vector/icon-collection-people-doing-various-activities-vector-37637898" title="icon collection people doing various activities vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/78/98/icon-collection-people-doing-various-activities-vector-37637898.jpg" title="icon collection people doing various activities" alt="icon collection people doing various activities vector image"></noscript></a></li>
+						<li data-id="22578026" data-title="web icons set orange square shiny buttons" data-src="https://cdn2.vectorstock.com/i/thumbs/80/26/web-icons-set-orange-square-shiny-buttons-vector-22578026.jpg"><a href="//www.vectorstock.com/royalty-free-vector/web-icons-set-orange-square-shiny-buttons-vector-22578026" title="web icons set orange square shiny buttons vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/80/26/web-icons-set-orange-square-shiny-buttons-vector-22578026.jpg" title="web icons set orange square shiny buttons" alt="web icons set orange square shiny buttons vector image"></noscript></a></li>
+						<li data-id="16314298" data-title="flat design red heart icon placed on white" data-src="https://cdn4.vectorstock.com/i/thumbs/42/98/flat-design-red-heart-icon-placed-on-white-vector-16314298.jpg"><a href="//www.vectorstock.com/royalty-free-vector/flat-design-red-heart-icon-placed-on-white-vector-16314298" title="flat design red heart icon placed on white vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/42/98/flat-design-red-heart-icon-placed-on-white-vector-16314298.jpg" title="flat design red heart icon placed on white" alt="flat design red heart icon placed on white vector image"></noscript></a></li>
+						<li data-id="23189908" data-title="heart hand logo" data-src="https://cdn4.vectorstock.com/i/thumbs/99/08/heart-hand-logo-vector-23189908.jpg"><a href="//www.vectorstock.com/royalty-free-vector/heart-hand-logo-vector-23189908" title="heart hand logo vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/99/08/heart-hand-logo-vector-23189908.jpg" title="heart hand logo" alt="heart hand logo vector image"></noscript></a></li>
+						<li data-id="20804330" data-title="white blank paper speech bubble" data-src="https://cdn1.vectorstock.com/i/thumbs/43/30/white-blank-paper-speech-bubble-vector-20804330.jpg"><a href="//www.vectorstock.com/royalty-free-vector/white-blank-paper-speech-bubble-vector-20804330" title="white blank paper speech bubble vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/43/30/white-blank-paper-speech-bubble-vector-20804330.jpg" title="white blank paper speech bubble" alt="white blank paper speech bubble vector image"></noscript></a></li>
+						<li data-id="24193530" data-title="fish and fishing logo" data-src="https://cdn1.vectorstock.com/i/thumbs/35/30/fish-and-fishing-logo-vector-24193530.jpg"><a href="//www.vectorstock.com/royalty-free-vector/fish-and-fishing-logo-vector-24193530" title="fish and fishing logo vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/35/30/fish-and-fishing-logo-vector-24193530.jpg" title="fish and fishing logo" alt="fish and fishing logo vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-similar-to_15479300" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-artist" class="group">
+				<h6><span class="icon"></span><strong>More by <a href="/royalty-free-vectors/vectors-by_Asmati" rel="nofollow">Asmati</a></strong></h6>
+
+			<div class="gallery large">
+				<ul>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/00/29/shopping-cart-with-add-mark-sign-white-vector-15480029.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-add-mark-sign-white-vector-15480029" title="shopping cart with add mark sign white vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/00/29/shopping-cart-with-add-mark-sign-white-vector-15480029.jpg" title="shopping cart with add mark sign white" alt="shopping cart with add mark sign white vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/40/69/number-2-sign-design-template-elements-vector-21394069.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-2-sign-design-template-elements-vector-21394069" title="number 2 sign design template elements vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/40/69/number-2-sign-design-template-elements-vector-21394069.jpg" title="number 2 sign design template elements" alt="number 2 sign design template elements vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/65/67/shopping-cart-with-check-mark-sign-paper-vector-15596567.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-check-mark-sign-paper-vector-15596567" title="shopping cart with check mark sign paper vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/65/67/shopping-cart-with-check-mark-sign-paper-vector-15596567.jpg" title="shopping cart with check mark sign paper" alt="shopping cart with check mark sign paper vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/00/32/shopping-cart-with-remove-sign-vector-15480032.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-remove-sign-vector-15480032" title="shopping cart with remove sign vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/00/32/shopping-cart-with-remove-sign-vector-15480032.jpg" title="shopping cart with remove sign" alt="shopping cart with remove sign vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/40/72/number-4-sign-design-template-element-vector-21394072.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-4-sign-design-template-element-vector-21394072" title="number 4 sign design template element vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/40/72/number-4-sign-design-template-element-vector-21394072.jpg" title="number 4 sign design template element" alt="number 4 sign design template element vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/65/65/shopping-cart-with-delete-sign-paper-vector-15596565.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-paper-vector-15596565" title="shopping cart with delete sign paper vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/65/65/shopping-cart-with-delete-sign-paper-vector-15596565.jpg" title="shopping cart with delete sign paper" alt="shopping cart with delete sign paper vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/40/73/number-5-sign-design-template-element-vector-21394073.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-5-sign-design-template-element-vector-21394073" title="number 5 sign design template element vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/40/73/number-5-sign-design-template-element-vector-21394073.jpg" title="number 5 sign design template element" alt="number 5 sign design template element vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/40/75/number-7-sign-design-template-element-vector-21394075.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-7-sign-design-template-element-vector-21394075" title="number 7 sign design template element vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/40/75/number-7-sign-design-template-element-vector-21394075.jpg" title="number 7 sign design template element" alt="number 7 sign design template element vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/40/74/number-6-sign-design-template-element-vector-21394074.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-6-sign-design-template-element-vector-21394074" title="number 6 sign design template element vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/40/74/number-6-sign-design-template-element-vector-21394074.jpg" title="number 6 sign design template element" alt="number 6 sign design template element vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/65/54/shopping-cart-with-add-mark-sign-paper-vector-15596554.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-add-mark-sign-paper-vector-15596554" title="shopping cart with add mark sign paper vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/65/54/shopping-cart-with-add-mark-sign-paper-vector-15596554.jpg" title="shopping cart with add mark sign paper" alt="shopping cart with add mark sign paper vector image"></noscript></a></li>
+				</ul>
+			</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="21394077" data-title="number 8 sign design template element" data-src="https://cdn3.vectorstock.com/i/thumbs/40/77/number-8-sign-design-template-element-vector-21394077.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-8-sign-design-template-element-vector-21394077" title="number 8 sign design template element vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/40/77/number-8-sign-design-template-element-vector-21394077.jpg" title="number 8 sign design template element" alt="number 8 sign design template element vector image vector image"></noscript></a></li>
+						<li data-id="15480037" data-title="shopping cart with check mark sign white" data-src="https://cdn3.vectorstock.com/i/thumbs/00/37/shopping-cart-with-check-mark-sign-white-vector-15480037.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-check-mark-sign-white-vector-15480037" title="shopping cart with check mark sign white vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/00/37/shopping-cart-with-check-mark-sign-white-vector-15480037.jpg" title="shopping cart with check mark sign white" alt="shopping cart with check mark sign white vector image vector image"></noscript></a></li>
+						<li data-id="15480034" data-title="shopping cart with delete sign white icon" data-src="https://cdn5.vectorstock.com/i/thumbs/00/34/shopping-cart-with-delete-sign-white-icon-vector-15480034.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-white-icon-vector-15480034" title="shopping cart with delete sign white icon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/00/34/shopping-cart-with-delete-sign-white-icon-vector-15480034.jpg" title="shopping cart with delete sign white icon" alt="shopping cart with delete sign white icon vector image vector image"></noscript></a></li>
+						<li data-id="21394079" data-title="number 0 sign design template element" data-src="https://cdn5.vectorstock.com/i/thumbs/40/79/number-0-sign-design-template-element-vector-21394079.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-0-sign-design-template-element-vector-21394079" title="number 0 sign design template element vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/40/79/number-0-sign-design-template-element-vector-21394079.jpg" title="number 0 sign design template element" alt="number 0 sign design template element vector image vector image"></noscript></a></li>
+						<li data-id="21394068" data-title="number 1 sign design template element" data-src="https://cdn4.vectorstock.com/i/thumbs/40/68/number-1-sign-design-template-element-vector-21394068.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-1-sign-design-template-element-vector-21394068" title="number 1 sign design template element vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/40/68/number-1-sign-design-template-element-vector-21394068.jpg" title="number 1 sign design template element" alt="number 1 sign design template element vector image vector image"></noscript></a></li>
+						<li data-id="21394078" data-title="number 9 sign design template element" data-src="https://cdn4.vectorstock.com/i/thumbs/40/78/number-9-sign-design-template-element-vector-21394078.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-9-sign-design-template-element-vector-21394078" title="number 9 sign design template element vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/40/78/number-9-sign-design-template-element-vector-21394078.jpg" title="number 9 sign design template element" alt="number 9 sign design template element vector image vector image"></noscript></a></li>
+						<li data-id="21394070" data-title="number 3 sign design template element" data-src="https://cdn1.vectorstock.com/i/thumbs/40/70/number-3-sign-design-template-element-vector-21394070.jpg"><a href="//www.vectorstock.com/royalty-free-vector/number-3-sign-design-template-element-vector-21394070" title="number 3 sign design template element vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/40/70/number-3-sign-design-template-element-vector-21394070.jpg" title="number 3 sign design template element" alt="number 3 sign design template element vector image vector image"></noscript></a></li>
+						<li data-id="15596560" data-title="shopping cart with remove sign" data-src="https://cdn1.vectorstock.com/i/thumbs/65/60/shopping-cart-with-remove-sign-vector-15596560.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-remove-sign-vector-15596560" title="shopping cart with remove sign vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/65/60/shopping-cart-with-remove-sign-vector-15596560.jpg" title="shopping cart with remove sign" alt="shopping cart with remove sign vector image vector image"></noscript></a></li>
+						<li data-id="15596079" data-title="shopping cart sign paper whitish icon" data-src="https://cdn5.vectorstock.com/i/thumbs/60/79/shopping-cart-sign-paper-whitish-icon-vector-15596079.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-sign-paper-whitish-icon-vector-15596079" title="shopping cart sign paper whitish icon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/60/79/shopping-cart-sign-paper-whitish-icon-vector-15596079.jpg" title="shopping cart sign paper whitish icon" alt="shopping cart sign paper whitish icon vector image vector image"></noscript></a></li>
+						<li data-id="13248860" data-title="shopping cart sign red icon with soft" data-src="https://cdn1.vectorstock.com/i/thumbs/88/60/shopping-cart-sign-red-icon-with-soft-vector-13248860.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-sign-red-icon-with-soft-vector-13248860" title="shopping cart sign red icon with soft vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/88/60/shopping-cart-sign-red-icon-with-soft-vector-13248860.jpg" title="shopping cart sign red icon with soft" alt="shopping cart sign red icon with soft vector image vector image"></noscript></a></li>
+						<li data-id="13335857" data-title="shopping cart sign red icon with soft" data-src="https://cdn3.vectorstock.com/i/thumbs/58/57/shopping-cart-sign-red-icon-with-soft-vector-13335857.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-sign-red-icon-with-soft-vector-13335857" title="shopping cart sign red icon with soft vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/58/57/shopping-cart-sign-red-icon-with-soft-vector-13335857.jpg" title="shopping cart sign red icon with soft" alt="shopping cart sign red icon with soft vector image vector image"></noscript></a></li>
+						<li data-id="15631402" data-title="shopping cart sign whitish icon on brick" data-src="https://cdn3.vectorstock.com/i/thumbs/14/02/shopping-cart-sign-whitish-icon-on-brick-vector-15631402.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-sign-whitish-icon-on-brick-vector-15631402" title="shopping cart sign whitish icon on brick vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/14/02/shopping-cart-sign-whitish-icon-on-brick-vector-15631402.jpg" title="shopping cart sign whitish icon on brick" alt="shopping cart sign whitish icon on brick vector image vector image"></noscript></a></li>
+						<li data-id="18666980" data-title="shopping cart sign white icon on tangelo" data-src="https://cdn1.vectorstock.com/i/thumbs/69/80/shopping-cart-sign-white-icon-on-tangelo-vector-18666980.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-sign-white-icon-on-tangelo-vector-18666980" title="shopping cart sign white icon on tangelo vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/69/80/shopping-cart-sign-white-icon-on-tangelo-vector-18666980.jpg" title="shopping cart sign white icon on tangelo" alt="shopping cart sign white icon on tangelo vector image vector image"></noscript></a></li>
+						<li data-id="18667976" data-title="shopping cart with add mark sign white" data-src="https://cdn2.vectorstock.com/i/thumbs/79/76/shopping-cart-with-add-mark-sign-white-vector-18667976.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-add-mark-sign-white-vector-18667976" title="shopping cart with add mark sign white vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/79/76/shopping-cart-with-add-mark-sign-white-vector-18667976.jpg" title="shopping cart with add mark sign white" alt="shopping cart with add mark sign white vector image vector image"></noscript></a></li>
+						<li data-id="15547763" data-title="shopping cart with remove sign" data-src="https://cdn4.vectorstock.com/i/thumbs/77/63/shopping-cart-with-remove-sign-vector-15547763.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-remove-sign-vector-15547763" title="shopping cart with remove sign vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/77/63/shopping-cart-with-remove-sign-vector-15547763.jpg" title="shopping cart with remove sign" alt="shopping cart with remove sign vector image vector image"></noscript></a></li>
+						<li data-id="17444259" data-title="shopping cart with delete sign white icon" data-src="https://cdn5.vectorstock.com/i/thumbs/42/59/shopping-cart-with-delete-sign-white-icon-vector-17444259.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-white-icon-vector-17444259" title="shopping cart with delete sign white icon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/42/59/shopping-cart-with-delete-sign-white-icon-vector-17444259.jpg" title="shopping cart with delete sign white icon" alt="shopping cart with delete sign white icon vector image vector image"></noscript></a></li>
+						<li data-id="17146600" data-title="shopping cart with delete sign black icon" data-src="https://cdn1.vectorstock.com/i/thumbs/66/00/shopping-cart-with-delete-sign-black-icon-vector-17146600.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-black-icon-vector-17146600" title="shopping cart with delete sign black icon vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/66/00/shopping-cart-with-delete-sign-black-icon-vector-17146600.jpg" title="shopping cart with delete sign black icon" alt="shopping cart with delete sign black icon vector image vector image"></noscript></a></li>
+						<li data-id="30226079" data-title="shopping cart with delete sign white icon" data-src="https://cdn5.vectorstock.com/i/thumbs/60/79/shopping-cart-with-delete-sign-white-icon-vector-30226079.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-white-icon-vector-30226079" title="shopping cart with delete sign white icon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/60/79/shopping-cart-with-delete-sign-white-icon-vector-30226079.jpg" title="shopping cart with delete sign white icon" alt="shopping cart with delete sign white icon vector image vector image"></noscript></a></li>
+						<li data-id="15547765" data-title="shopping cart with delete sign whitish" data-src="https://cdn1.vectorstock.com/i/thumbs/77/65/shopping-cart-with-delete-sign-whitish-vector-15547765.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-whitish-vector-15547765" title="shopping cart with delete sign whitish vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/77/65/shopping-cart-with-delete-sign-whitish-vector-15547765.jpg" title="shopping cart with delete sign whitish" alt="shopping cart with delete sign whitish vector image vector image"></noscript></a></li>
+						<li data-id="15632553" data-title="shopping cart with delete sign whitish" data-src="https://cdn4.vectorstock.com/i/thumbs/25/53/shopping-cart-with-delete-sign-whitish-vector-15632553.jpg"><a href="//www.vectorstock.com/royalty-free-vector/shopping-cart-with-delete-sign-whitish-vector-15632553" title="shopping cart with delete sign whitish vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/25/53/shopping-cart-with-delete-sign-whitish-vector-15632553.jpg" title="shopping cart with delete sign whitish" alt="shopping cart with delete sign whitish vector image vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-by_Asmati" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-keywords" class="group">
+				<h6><span class="icon"></span><strong>Related Searches</strong></h6>
+				<ul>
+					<li><a href="/royalty-free-vectors/shopping-vectors">Shopping</a></li>
+					<li><a href="/royalty-free-vectors/transparent-vectors">Transparent</a></li>
+					<li><a href="/royalty-free-vectors/minimalist-vectors">Minimalist</a></li>
+					<li><a href="/royalty-free-vectors/sign-vectors">Sign</a></li>
+					<li><a href="/royalty-free-vectors/white-vectors">White</a></li>
+					<li><a href="/royalty-free-vectors/cart-vectors">Cart</a></li>
+					<li><a href="/royalty-free-vectors/icon-vectors">Icon</a></li>
+					<li><a href="/royalty-free-vectors/soft-vectors">Soft</a></li>
+					<li><a href="/royalty-free-vectors/symbol-vectors">Symbol</a></li>
+					<li><a href="/royalty-free-vectors/shadow-vectors">Shadow</a></li>
+					<li><a href="/royalty-free-vectors/silhouette-vectors">Silhouette</a></li>
+					<li><a href="/royalty-free-vectors/button-vectors">Button</a></li>
+					<li><a href="/royalty-free-vectors/flat-vectors">Flat</a></li>
+					<li><a href="/royalty-free-vectors/business-vectors">Business</a></li>
+					<li><a href="/royalty-free-vectors/mark-vectors">Mark</a></li>
+					<li><a href="/royalty-free-vectors/trolley-vectors">Trolley</a></li>
+					<li><a href="/royalty-free-vectors/pictograph-vectors">Pictograph</a></li>
+					<li><a href="/royalty-free-vectors/whitish-vectors">Whitish</a></li>
+					<li><a href="/royalty-free-vectors/delivery-vectors">Delivery</a></li>
+					<li><a href="/royalty-free-vectors/shop-vectors">Shop</a></li>
+					<li><a href="/royalty-free-vectors/retail-vectors">Retail</a></li>
+					<li><a href="/royalty-free-vectors/buy-vectors">Buy</a></li>
+					<li><a href="/royalty-free-vectors/basket-vectors">Basket</a></li>
+					<li><a href="/royalty-free-vectors/tool-vectors">Tool</a></li>
+					<li><a href="/royalty-free-vectors/minimalistic-vectors">Minimalistic</a></li>
+					<li><a href="/royalty-free-vectors/simplistic-vectors">Simplistic</a></li>
+					<li><a href="/royalty-free-vectors/pushcart-vectors">Pushcart</a></li>
+					<li><a href="/royalty-free-vectors/shopping-cart-vectors">Shopping Cart</a></li>
+				</ul>
+			</div>
+		</section>
+	</article>
+
+	<!-- Footer -->
+	<footer>
+		<div>
+		<div class="column c1">
+			<nav class="company">
+				<h4>VectorStock</h4>
+				<ul>
+					<li><a href="/" title="Home">Home</a></li>
+					<li class="sel"><a href="/free-vectors" title="Free Vectors">Free Vectors</a></li>
+					<li class="sel"><a href="/royalty-free-vectors" title="All Royalty-Free Vectors">All Vectors</a></li>
+				</ul>
+				<ul>
+					<li><a href="/what-is-a-vector" title="What is a Vector?">What is a Vector?</a></li>
+				</ul>
+				<ul>
+					<li class="sel"><a href="/faq" title="Frequently Asked Questions"><span class="long">Frequently Asked Questions</span><span class="short">FAQs</span></a></li>
+					<li><a href="/faq/members/terms-of-use" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+					<li class="sel"><a href="/contact" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="column c2">
+			<nav class="account">
+				<h4><span class="title">Account</span><span class="icon"></span></h4>
+					<ul>
+						<li><a href="/signup" title="Join Now">Join Now</a></li>
+						<li><a href="/pricing" title="Pricing">Pricing</a></li>
+						<li><a href="/?signup=1&contributor=1" title="Contributor Sign Up">Contributor Sign Up</a></li>
+						<li><a href="/faq/artists/why-sell-at-vectorstock" title="Contributor FAQ">Contributor FAQ</a></li>
+					</ul>
+			</nav>
+		</div>
+		<div class="column c3">
+			<nav class="social">
+				<h4>Social</h4>
+				<ul>
+					<li class="facebook sel"><a href="https://www.facebook.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Facebook</span><span class="icon"></span></a></li>
+					<li class="pinterest sel"><a href="https://pinterest.com/vectorstock/" target="_blank" rel="noreferrer"><span class="title">Pinterest</span><span class="icon"></span></a></li>
+					<li class="twitter sel"><a href="https://twitter.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Twitter</span><span class="icon"></span></a></li>
+				</ul>
+			</nav>
+			<div class="signoff">
+				<h5><a href="https://www.vectorstock.com/" title="VectorStock&reg;">VectorStock&reg;</a></h5>
+				<p>VectorStock and the VectorStock logo are registered trademarks of VectorStock Media.<br>
+				&copy; 2022. <span>All Rights Reserved.</span></p>
+			</div>
+		</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" nonce="qe/DpvRnyhbsZWrhvwsi9BwUzcpK4CJAW8ThC63707U=">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"02e09611df","applicationID":"156179534","transactionName":"ZV0ENRYCC0RYAkVbDVwXJRQXFwpaFhNeSwNeTB9MAhEAUhQXVFEWXUpJFw0GEg==","queueTime":0,"applicationTime":48,"atts":"SRoHQ14YGEo=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+
+</body>
+</html>

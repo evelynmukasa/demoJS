@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap');
+/* vw:viewport width  vh:viewport height */
+*{
+    box-sizing:border-box;
+}
+/* overflow to hidden means that all content that do not fit ht cintianer will be hidden */
+body{
+    font-family:'Roboto',sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.container{
+    display: flex;
+    width:90vw;
+}
+.panel{
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    /* color: #fff; */
+    flex:0.5;
+    margin:10px;
+    position: relative;
+    transition: flex 0.7s ease-in;  
+}
+.panel h3{
+    font-size:24px;
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    margin:0;
+    opacity:0;
+}
+.panel.active{
+    flex:5;
+}
+.panel.active h3{
+    opacity:1;
+    /* the transition on the opacity is to prevent the h3 from quand on crashing badly when the panel turns active  */
+    transition: opacity 0.3s ease-in 0.4s; ;
+}
+/* the media is for to hide other two panels when th screen goes under 480 pixels  */
+@media(max-width:480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display:none;
+    }
+}
